@@ -1,0 +1,8 @@
+#!/bin/bash
+
+string="$1"
+subString="$2"
+
+count=$( echo "$string" | grep -o "$subString" | wc -l )
+
+echo "The substring '$subString' appears '$count' times in '$string' "

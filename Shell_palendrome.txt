@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "enter number"
+read n
+
+num=0
+temp=$n
+pal=$n
+
+while (( $temp > 0 ))
+do
+	k=$(( $temp % 10 ))
+	num=$(( $num * 10 + k ))
+	temp=$(( $temp / 10 ))
+done
+
+echo "reverse is $num "
+
+if [ $num -eq $pal ]
+then
+	echo "is palindrome"
+else
+	echo " not palendrome"
+fi

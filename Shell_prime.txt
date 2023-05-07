@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter number "
+read n
+
+for (( i=2; i*i<=$n ;i++ ))
+do
+	ans=$(( n%i ))
+	if [ $ans -eq 0 ]
+	then
+		echo "is not a prime"
+		exit 0
+	fi
+done
+
+echo "is prime "

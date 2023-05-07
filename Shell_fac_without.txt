@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "Entet a number: "
+read n
+
+fac=1
+
+for (( i=1;i<=$n;i++ ))
+do
+	fac=$(( $fac * $i ))
+done
+
+echo "Factorial is: $fac "
